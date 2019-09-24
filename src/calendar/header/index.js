@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ActivityIndicator} from 'react-native';
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import XDate from 'xdate';
 import PropTypes from 'prop-types';
 import styleConstructor from './style';
@@ -10,7 +10,7 @@ import {CHANGE_MONTH_LEFT_ARROW, CHANGE_MONTH_RIGHT_ARROW} from '../../testIDs';
 
 class CalendarHeader extends Component {
   static displayName = 'IGNORE';
-  
+
   static propTypes = {
     theme: PropTypes.object,
     hideArrows: PropTypes.bool,
@@ -90,39 +90,6 @@ class CalendarHeader extends Component {
     let weekDaysNames = weekDayNames(this.props.firstDay);
     const {testID} = this.props;
 
-    if (!this.props.hideArrows) {
-      leftArrow = (
-        <TouchableOpacity
-          onPress={this.onPressLeft}
-          style={this.style.arrow}
-          hitSlop={{left: 20, right: 20, top: 20, bottom: 20}}
-          testID={testID ? `${CHANGE_MONTH_LEFT_ARROW}-${testID}`: CHANGE_MONTH_LEFT_ARROW}
-        >
-          {this.props.renderArrow
-            ? this.props.renderArrow('left')
-            : <Image
-              source={require('../img/previous.png')}
-              style={this.style.arrowImage}
-            />}
-        </TouchableOpacity>
-      );
-      rightArrow = (
-        <TouchableOpacity
-          onPress={this.onPressRight}
-          style={this.style.arrow}
-          hitSlop={{left: 20, right: 20, top: 20, bottom: 20}}
-          testID={testID ? `${CHANGE_MONTH_RIGHT_ARROW}-${testID}`: CHANGE_MONTH_RIGHT_ARROW}
-        >
-          {this.props.renderArrow
-            ? this.props.renderArrow('right')
-            : <Image
-              source={require('../img/next.png')}
-              style={this.style.arrowImage}
-            />}
-        </TouchableOpacity>
-      );
-    }
-
     let indicator;
     if (this.props.showIndicator) {
       indicator = <ActivityIndicator color={this.props.theme && this.props.theme.indicatorColor}/>;
@@ -145,12 +112,12 @@ class CalendarHeader extends Component {
           <View style={this.style.week}>
             {this.props.weekNumbers && <Text allowFontScaling={false} style={this.style.dayHeader}></Text>}
             {weekDaysNames.map((day, idx) => (
-              <Text 
-                allowFontScaling={false} 
-                key={idx} 
-                accessible={false} 
-                style={this.style.dayHeader} 
-                numberOfLines={1} 
+              <Text
+                allowFontScaling={false}
+                key={idx}
+                accessible={false}
+                style={this.style.dayHeader}
+                numberOfLines={1}
                 importantForAccessibility='no'
               >
                 {day}

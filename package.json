@@ -24,18 +24,18 @@
   "dependencies": {
     "@cnakazawa/xdate": "^0.8.2",
     "fbjs": "^1.0.0",
-    "lodash": "^4.0.0",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.0.0",
+    "eslint": "^6.1.0",
     "jasmine": "^2.5.2",
-    "semver": "5.x.x",
-    "shell-utils": "1.x.x",
-    "react": "16.8.3",
+    "lodash": "^4.0.0",
+    "react-native-navigation": "2.13.1",
     "react-native": "0.59.3",
-    "react-native-navigation": "2.13.1"
+    "react": "16.8.3",
+    "semver": "5.x.x",
+    "shell-utils": "1.x.x"
   }
 }

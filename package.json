@@ -1,6 +1,6 @@
 {
   "name": "@cnakazawa/react-native-calendars",
-  "version": "1.22.2",
+  "version": "1.22.3",
   "main": "src/index.js",
   "description": "React Native Calendar Components",
   "scripts": {

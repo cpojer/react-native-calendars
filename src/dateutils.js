@@ -1,4 +1,4 @@
-const XDate = require('xdate');
+const XDate = require('@cnakazawa/xdate');
 
 function sameMonth(a, b) {
   return a instanceof XDate && b instanceof XDate &&

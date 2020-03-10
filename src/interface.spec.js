@@ -1,5 +1,5 @@
 const iface = require('./interface');
-const XDate = require('xdate');
+const XDate = require('@cnakazawa/xdate');
 
 describe('calendar interface', () => {
   describe('input', () => {

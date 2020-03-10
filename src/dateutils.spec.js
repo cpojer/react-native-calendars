@@ -1,4 +1,4 @@
-const XDate = require('xdate');
+const XDate = require('@cnakazawa/xdate');
 const dateutils = require('./dateutils');
 
 describe('dateutils', function () {

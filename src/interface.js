@@ -1,4 +1,4 @@
-const XDate = require('xdate');
+const XDate = require('@cnakazawa/xdate');
 
 function padNumber(n) {
   if (n < 10) {
@@ -40,4 +40,3 @@ module.exports = {
   xdateToData,
   parseDate
 };
-

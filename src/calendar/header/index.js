@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {ActivityIndicator} from 'react-native';
 import {View, Text} from 'react-native';
-import XDate from 'xdate';
+import XDate from '@cnakazawa/xdate';
 import PropTypes from 'prop-types';
 import styleConstructor from './style';
 import {weekDayNames} from '../../dateutils';

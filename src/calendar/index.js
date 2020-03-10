@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, ViewPropTypes} from 'react-native';
 import PropTypes from 'prop-types';
-import XDate from 'xdate';
+import XDate from '@cnakazawa/xdate';
 
 import dateutils from '../dateutils';
 import {xdateToData, parseDate} from '../interface';

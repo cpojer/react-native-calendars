@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {FlatList, Platform, Dimensions, ActivityIndicator, View} from 'react-native';
 import PropTypes from 'prop-types';
-import XDate from 'xdate';
+import XDate from '@cnakazawa/xdate';
 
 import {xdateToData, parseDate} from '../interface';
 import styleConstructor from './style';

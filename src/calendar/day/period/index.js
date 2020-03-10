@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
@@ -9,6 +8,8 @@ import {shouldUpdate} from '../../../component-updater';
 
 import * as defaultStyle from '../../../style';
 import styleConstructor from './style';
+
+const isEqual = require('lodash/isEqual');
 
 class Day extends Component {
   static displayName = 'IGNORE';
@@ -48,7 +49,7 @@ class Day extends Component {
   shouldComponentUpdate(nextProps) {
     const newMarkingStyle = this.getDrawingStyle(nextProps.marking);
 
-    if (!_.isEqual(this.markingStyle, newMarkingStyle)) {
+    if (!isEqual(this.markingStyle, newMarkingStyle)) {
       this.markingStyle = newMarkingStyle;
       return true;
     }

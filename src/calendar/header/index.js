@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {ActivityIndicator} from 'react-native';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text} from 'react-native';
 import XDate from 'xdate';
 import PropTypes from 'prop-types';
 import styleConstructor from './style';
 import {weekDayNames} from '../../dateutils';
-import {CHANGE_MONTH_LEFT_ARROW, CHANGE_MONTH_RIGHT_ARROW} from '../../testIDs';
-
 
 class CalendarHeader extends Component {
   static displayName = 'IGNORE';
@@ -88,7 +86,6 @@ class CalendarHeader extends Component {
     let leftArrow = <View />;
     let rightArrow = <View />;
     let weekDaysNames = weekDayNames(this.props.firstDay);
-    const {testID} = this.props;
 
     let indicator;
     if (this.props.showIndicator) {

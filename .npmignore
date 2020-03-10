@@ -3,11 +3,14 @@
 src/**/*.spec.js
 example/
 demo/
+spec/
 ios/
 android/
 index.android.js
 index.ios.js
-
+pom.xml
+ISSUE_TEMPLATE.md
+CHANGELOG.md
 
 .npmignore
 .watchmanconfig

@@ -1,9 +1,8 @@
-const isEqual = require('lodash/isEqual');
-const get = require('lodash/get');
+const areEqual = require('fbjs/lib/areEqual');
 
 function shouldUpdate(a, b, paths) {
   for (let i = 0; i < paths.length; i++) {
-    const equals = isEqual(get(a, paths[i]), get(b, paths[i]));
+    const equals = areEqual(a[paths[i]], b[paths[i]]);
     if (!equals) {
       return true;
     }

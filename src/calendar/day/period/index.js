@@ -9,7 +9,7 @@ import {shouldUpdate} from '../../../component-updater';
 import * as defaultStyle from '../../../style';
 import styleConstructor from './style';
 
-const isEqual = require('lodash/isEqual');
+const areEqual = require('fbjs/lib/areEqual');
 
 class Day extends Component {
   static displayName = 'IGNORE';
@@ -49,7 +49,7 @@ class Day extends Component {
   shouldComponentUpdate(nextProps) {
     const newMarkingStyle = this.getDrawingStyle(nextProps.marking);
 
-    if (!isEqual(this.markingStyle, newMarkingStyle)) {
+    if (!areEqual(this.markingStyle, newMarkingStyle)) {
       this.markingStyle = newMarkingStyle;
       return true;
     }
